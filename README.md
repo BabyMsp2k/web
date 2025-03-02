@@ -1,54 +1,58 @@
-<div align="center">
+# 🌐 Osobní web
 
-<a target="_blank" href="https://nuro.dev">
-    <img alt='Website' src="./public/blog/hello_world/screenshot.png" />
-</a>
+Vítejte na mém osobním webu! Tento open-source projekt slouží jako portfolio, blog nebo vstupní stránka, kde prezentuji svou práci, zájmy a projekty.
 
-[![Website](https://img.shields.io/badge/%20%F0%9F%8F%A1%20website-0072ff.svg?longCache=true&style=for-the-badge)](https://nuro.dev)
-[![License](https://img.shields.io/badge/-mit-red.svg?longCache=true&style=for-the-badge)](https://github.com/tdemapp/website/blob/master/LICENSE)
-[![Website](https://img.shields.io/badge/Deploy-brightgreen.svg?logo=vercel&longCache=true&style=for-the-badge)](https://vercel.com/import/project?template=https://github.com/nurodev/nuro.dev)
-[![Vercel](https://img.shields.io/badge/-powered%20by%20vercel-black.svg?logo=vercel&longCache=true&style=for-the-badge)](https://vercel.com/home?utm_source=nuro&utm_campaign=oss)
+---
 
-</div>
+## ✨ Funkce
 
-## 🛠 Development
+- Čistý a moderní design
+- Responzivní rozložení pro všechna zařízení
+- Dynamický obsah a interaktivní prvky
+- Optimalizováno pro výkon a SEO
 
-Clone the repository
+---
 
-```zsh
-git clone https://github.com/nurodev/nuro.dev.git
-```
+## 🛠️ Technologie
 
-Install dependencies
+- **Frontend:** TypeScript
+- **Hosting:** Vercel
 
-```zsh
-npm install
+---
 
-# Or using Yarn
+## 🔧 Installation / Instalace
 
-yarn
-```
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/BabyMsp2k/web
+   ```
+2. Navigate to the project folder:
+   ```sh
+   cd web
+   ```
+3. Install dependencies (if needed):
+   ```sh
+   npm install  # or yarn install
+   ```
+4. Start the development server:
+   ```sh
+   npm run dev  # or yarn dev
+   ```
+5. Open your browser and go to `http://localhost:3000`.
 
-Start the development server
+---
 
-```zsh
-npm run dev
+## 📜 Licence
 
-# Or using Yarn
+Tento projekt pochází z [NuroDev](https://github.com/NuroDev/) a je licencován pod MIT licencí. Více informací naleznete v souboru [LICENSE](LICENSE).
 
-yarn dev
-```
+---
 
-Build for production
+## 📩 Kontakt
 
-```zsh
-npm run build
+Máte-li jakékoli dotazy nebo návrhy, neváhejte mě kontaktovat.
 
-# Or using Yarn
+- **Email:** [admin@babymsp2k.wtf](mailto:admin@babymsp2k.wtf)
+- **Instagram:** [@babymsp2k](https://twitter.com/yourhandle)
+- **Web:** [babymsp2k.wtf](https://babymsp2k.wtf)
 
-yarn build
-```
-
-## 📄 License
-
-MIT © [Ben Dixon](https://github.com/nurodev/nuro.dev/blob/main/LICENSE)
