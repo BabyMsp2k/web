@@ -8,8 +8,8 @@ export function useSeoProps(
 ): Partial<ComponentProps<typeof NextSeo>> {
 	const router = useRouter();
 
-	const title = 'nuro ─ developer';
-	const description = "Hey 👋 I'm Ben, a developer";
+	const title = 'BabyMsp2k ─ developer';
+	const description = "Ahoj 👋 já jsem BabyMsp2k, developer";
 
 	return {
 		title,
@@ -19,11 +19,11 @@ export function useSeoProps(
 			title,
 			description,
 			site_name: 'nuro',
-			url: `https://nuro.dev/${router.asPath}`,
+			url: `https://babymsp2k.wtf/${router.asPath}`,
 			type: 'website',
 			images: [
 				{
-					url: 'https://nuro.dev/banner.png',
+					url: 'https://babymsp2k.wtf/banner.png',
 					alt: description,
 					width: 1280,
 					height: 720,
