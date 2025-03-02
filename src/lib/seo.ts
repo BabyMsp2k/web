@@ -14,7 +14,7 @@ export function useSeoProps(
 	return {
 		title,
 		description,
-		canonical: `https://nuro.dev/${router.asPath}`,
+		canonical: `https://babymsp2k.wtf/${router.asPath}`,
 		openGraph: {
 			title,
 			description,
@@ -32,8 +32,8 @@ export function useSeoProps(
 		},
 		twitter: {
 			cardType: 'summary_large_image',
-			handle: '@nurodev',
-			site: '@nurodev',
+			handle: '@babymsp2k',
+			site: '@babymsp2k',
 		},
 		...props,
 	};
