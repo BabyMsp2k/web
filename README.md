@@ -53,6 +53,6 @@ Tento projekt pochází z [NuroDev](https://github.com/NuroDev/) a je licencová
 Máte-li jakékoli dotazy nebo návrhy, neváhejte mě kontaktovat.
 
 - **Email:** [admin@babymsp2k.wtf](mailto:admin@babymsp2k.wtf)
-- **Instagram:** [@babymsp2k](https://twitter.com/yourhandle)
+- **Instagram:** [@babymsp2k](https://instagram.com/babymsp2k)
 - **Web:** [babymsp2k.wtf](https://babymsp2k.wtf)
 
