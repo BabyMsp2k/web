@@ -7,7 +7,6 @@
 	"regions": ["lhr1"],
 	"redirects": [
 		{ "source": "/github", "destination": "https://github.com/nurodev" },
-		{ "source": "/portfolio", "destination": "/projects" },
-		}
+		{ "source": "/portfolio", "destination": "/projects" }
 	]
 }
