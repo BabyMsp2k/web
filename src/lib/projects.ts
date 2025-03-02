@@ -7,19 +7,10 @@ import type { GitHubRepos, Project, ProjectPost } from '~/types';
  * Fetch Projects
  *
  * Make a GET request to the GitHub API to gather all repositories
- * under my `nurodev` username & then filter them down to only
- * include those that contain the `portfolio` topic
- *
- * @TODO Switch to v3 API using GraphQL to save over-fetching
+ * under my `babymsp2k` username.
  */
 export async function fetchProjects(): Promise<Array<Project> | null> {
-	const response = await fetch('https://api.github.com/users/babymsp2k/repos', {
-		headers: {
-			...(process.env.GITHUB_PAT && {
-				authorization: `token ${process.env.GITHUB_PAT}`,
-			}),
-		},
-	});
+	const response = await fetch('https://api.github.com/users/babymsp2k/repos');
 	if (response.status !== 200) {
 		const json = (await response.json()) as {
 			documentation_url: string;
@@ -39,41 +30,35 @@ export async function fetchProjects(): Promise<Array<Project> | null> {
 	const { default: rawProjectPosts } = await import('~/data/projects.json');
 	const projectPosts = rawProjectPosts as Array<ProjectPost>;
 
-	const projects: Array<Project> = json
-		.map((repo) => {
-			if (!repo.topics.includes('portfolio')) return null;
+	const projects: Array<Project> = json.map((repo) => {
+		// Strip the emoji suffix from the repo description
+		const trimmedDescription = repo.description ? repo.description.split(' ') : [];
+		trimmedDescription.shift();
+		const description = trimmedDescription.join(' ');
 
-			if (repo.archived) return null;
+		// Check if there is a matching blog post to attach
+		const repoPost =
+			projectPosts.length > 0 &&
+			projectPosts.find(
+				(post) => post.repository.toLowerCase() === repo.full_name.toLowerCase(),
+			);
 
-			// Strip the emoji suffix from the repo description
-			const trimmedDescription = repo.description.split(' ');
-			trimmedDescription.shift();
-			const description = trimmedDescription.join(' ');
+		return {
+			description,
+			icon: ((): string => {
+				if (!repo.description) return undefined;
 
-			// Check if there is a matching blog post to attach
-			const repoPost =
-				projectPosts.length > 0 &&
-				projectPosts.find(
-					(post) => post.repository.toLowerCase() === repo.full_name.toLowerCase(),
-				);
+				const char = repo.description.split(' ')[0];
 
-			return {
-				description,
-				icon: ((): string => {
-					if (!repo.description) return undefined;
-
-					const char = repo.description.split(' ')[0];
-
-					return emojiRegex().test(char) ? char : undefined;
-				})(),
-				homepage: repo.homepage ?? undefined,
-				name: repo.name,
-				post: repoPost ? `/blog/${repoPost.post}` : undefined,
-				template: false,
-				url: repo.html_url.toLowerCase(),
-			} as Project;
-		})
-		.filter((project) => project !== null);
+				return emojiRegex().test(char) ? char : undefined;
+			})(),
+			homepage: repo.homepage ?? undefined,
+			name: repo.name,
+			post: repoPost ? `/blog/${repoPost.post}` : undefined,
+			template: false,
+			url: repo.html_url.toLowerCase(),
+		} as Project;
+	});
 
 	return projects;
 }
