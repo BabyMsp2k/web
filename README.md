@@ -1,8 +1,5 @@
 <div align="left" style="position: relative;">
-<img src="https://img.icons8.com/external-tal-revivo-regular-tal-revivo/96/external-readme-is-a-easy-to-build-a-developer-hub-that-adapts-to-the-user-logo-regular-tal-revivo.png" align="right" width="30%" style="margin: -20px 0 0 20px;">
-<h1>Personal Web</h1>
-<p align="left">
-	<em><code>❯ REPLACE-ME</code></em>
+	<h1>Personal Web</h1>
 </p>
 <p align="left">
 	<img src="https://img.shields.io/github/license/BabyMsp2k/web?style=default&logo=opensourceinitiative&logoColor=white&color=232323" alt="license">
